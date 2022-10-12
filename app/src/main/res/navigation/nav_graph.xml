@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ni.edu.uca.navjanprado.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ni.edu.uca.navjanprado.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_kmFragment2"
+            app:destination="@id/kmFragment2" />
+        <action
+            android:id="@+id/action_menuFragment_to_antecesoresFragment2"
+            app:destination="@id/antecesoresFragment2" />
+        <action
+            android:id="@+id/action_menuFragment_to_raizFragment"
+            app:destination="@id/raizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kmFragment2"
+        android:name="ni.edu.uca.navjanprado.KmFragment"
+        android:label="fragment_km"
+        tools:layout="@layout/fragment_km" />
+    <fragment
+        android:id="@+id/antecesoresFragment2"
+        android:name="ni.edu.uca.navjanprado.AntecesoresFragment"
+        android:label="fragment_antecesores"
+        tools:layout="@layout/fragment_antecesores" />
+    <fragment
+        android:id="@+id/raizFragment"
+        android:name="ni.edu.uca.navjanprado.RaizFragment"
+        android:label="fragment_raiz"
+        tools:layout="@layout/fragment_raiz" />
+</navigation>
